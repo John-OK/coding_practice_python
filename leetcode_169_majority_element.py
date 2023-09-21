@@ -1,5 +1,5 @@
 def majorityElement(nums: list[int]) -> int:
-    # FIRST ATTEMPT: time complexity: 160 ms, beats 30.15%
+    # FIRST ATTEMPT: time complexity: O(n), 160 ms, beats 30.15%
     # n = len(nums)
     # num_frequency = {}
     #
@@ -12,7 +12,7 @@ def majorityElement(nums: list[int]) -> int:
     # return [key for key, value in num_frequency.items() if value > n/2][0]
 
 
-    # SECOND ATTEMPT: slightly better time complexity: 154 ms, beats 50.19%
+    # SECOND ATTEMPT: slightly better time; time complexity: O(n), 154 ms, beats 50.19%
     # num_frequency = {}
     #
     # for num in nums:
@@ -22,13 +22,13 @@ def majorityElement(nums: list[int]) -> int:
     # return max(num_frequency, key=num_frequency.get)
 
 
-    # THIRD ATTEMPT: time complexity: 137 ms, beats 97.87%, but seems gimmicky and very specific to this exact situation (i.e., not applicable to general, real-world coding problems)
+    # THIRD ATTEMPT: time complexity: O(n log n), 137 ms, beats 97.87%, but seems gimmicky and very specific to this exact situation (i.e., not applicable to general, real-world coding problems)
     # nums.sort()
     #
     # return nums[int(len(nums)/2)]
 
 
-    # FOURTH ATTEMPT: using Boyer-Moore's Voting Algorithm: 153 ms, beats 53.28% Not the best time complexity, but good to know this algo
+    # FOURTH ATTEMPT: using Boyer-Moore's Voting Algorithm: time complexity: O(n), 153 ms, beats 53.28% Not the best time complexity, but good to know this algo
     current_majority = 0
     count = 0
 

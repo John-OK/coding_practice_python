@@ -1,4 +1,5 @@
 def runningSum(nums: list[int]) -> list[int]:
+    # FIRST ATTEMPT: time complexity: O(n)
     # sum_list: list[int] = []
     # for index, num in enumerate(nums):
     #     if sum_list:
@@ -8,7 +9,7 @@ def runningSum(nums: list[int]) -> list[int]:
     # return sum_list
 
 
-    # 2nd Attempt: basically the same algorithm but modifies the original list to save space. Avoid when possible as modifying the inputs can have unexpected side effects.
+    # SECOND ATTEMPT: time complexity: O(n), basically the same algorithm but modifies the original list to save space. Avoid when possible as modifying the inputs can have unexpected side effects.
     for i in range(1, len(nums)):
         nums[i] += nums[i-1]
     return nums

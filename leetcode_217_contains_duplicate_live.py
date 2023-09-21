@@ -1,3 +1,4 @@
+# LIVE INTERVIEW PRACTICE WITH DAN
 """
 loop through each element except last element
     nest loop through each element beginning at index 1 to see if matches first element

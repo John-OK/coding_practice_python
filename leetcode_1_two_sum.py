@@ -1,14 +1,16 @@
 def twoSum(nums: list[int], target: int) -> list[int]:
-    # FIRST TRY: nested loop => O(n**2)
+    # FIRST ATTEMPT: time complexity: O(n**2)
     # for i, num in enumerate(nums):
-
+    #
     #     if i == len(nums) - 1:
     #         return []
-
+    #
     #     for j in range(i+1, len(nums)):
     #         if num + nums[j] == target:
     #             return [i, j]
 
+
+    # SECOND ATTEMPT: time complexity: O(n)
     hashmap = {}
 
     for i in range(len(nums)):
