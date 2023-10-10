@@ -1,3 +1,6 @@
+# Two pointers
+# TODO: Optimize for time (use two pointers)
+
 def countPairs(nums: list[int], target: int) -> int:
     numberOfPairs = 0
 
