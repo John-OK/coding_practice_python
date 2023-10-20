@@ -17,5 +17,18 @@ def removeDuplicates(nums: list[int]) -> int:
 
     return k
 
+
+# Solution from kshatriyas on leetcode that uses one of the pointers to keep
+# track of the number of unique elements by replacing non-unique elements with
+# unique ones. In the end, all unique elements are next to each other and j has
+# the value of the number of unique elements.
+
+    # j = 1
+    # for i in range(1, len(nums)):
+    #     if nums[i] != nums[i - 1]:
+    #         nums[j] = nums[i]
+    #         j += 1
+    # return j
+
 print(removeDuplicates([1, 1, 2]))
 print(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
