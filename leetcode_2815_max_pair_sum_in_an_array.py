@@ -1,6 +1,7 @@
 from collections import defaultdict
 
 def maxSum(nums: list[int]) -> int:
+    # FIRST ATTEMPT: time complexity: O(n), 118 ms, beats 68.23%
     max_digit_nums = defaultdict(list)
     max_sum = -1
 
@@ -16,7 +17,6 @@ def maxSum(nums: list[int]) -> int:
             
             if sum > max_sum:
                 max_sum = sum
-
 
     return max_sum
 
