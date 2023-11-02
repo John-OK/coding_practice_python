@@ -28,7 +28,8 @@ def isPalindrome(s: str) -> bool:
     # return True
 
 
-    # SECOND ATTEMPT: time complexity: O(n), 56 ms, beats 29.90%
+    # SECOND ATTEMPT: time complexity: O(n), 44 ms, beats 84.14%
+    # Only slightly better than first attempt.
     # NOTE: although there are nested loops, time complexity is still O(n)
     # because the inner loops are not looping through the whole string again,
     # but helping to progress the pointers towards the center
