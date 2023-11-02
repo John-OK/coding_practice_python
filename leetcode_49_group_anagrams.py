@@ -33,7 +33,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
     #     for char in word: "n" in time complexity
     #         count[ord(char) - ord("a")] += 1 # ord() gets the ASCII value of char; subtract by ord("a") to get index of char ("a" - "a" = 0; "b" - "a" = 1; ...; "z" - "a" = 25)
 
-    #     char_freqs[tuple(count)].append(word) # tuple becuase keys must be immutable
+    #     char_freqs[tuple(count)].append(word) # tuple because keys must be immutable
 
     # return char_freqs.values()
 
