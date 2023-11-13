@@ -37,7 +37,7 @@ def sortColors(nums: list[int]) -> None:
     # return nums
 
 
-    # THIRD ATTEMPT (partitioning): time complexity: O(n), 38 ms, beats 76.99%
+    # THIRD ATTEMPT (partitioning): time complexity: O(n), 36 ms, beats 83.45%
     low = 0
     high = len(nums) - 1
     current = 0
