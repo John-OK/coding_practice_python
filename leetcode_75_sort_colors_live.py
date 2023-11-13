@@ -17,21 +17,41 @@ def sortColors(nums: list[int]) -> None:
     #         else:
     #             left += 1
     #             right += 1
+    # return nums
 
 
 
-    SECOND ATTEMPT (hashmap): time complexity: O(n), 31 ms, beats 97.19%
-    from collections import defaultdict
-    freq_map = defaultdict(list)
+    # SECOND ATTEMPT (hashmap): time complexity: O(n), 31 ms, beats 97.19%
+    # from collections import defaultdict
+    # freq_map = defaultdict(list)
 
-    for num in nums:
-        freq_map[num].append(num)
+    # for num in nums:
+    #     freq_map[num].append(num)
 
-    i = 0
-    for num in range(3):
-        freq = freq_map[num]
-        nums[i:i + len(freq)] = freq_map[num]
-        i += len(freq)
+    # i = 0
+    # for num in range(3):
+    #     freq = freq_map[num]
+    #     nums[i:i + len(freq)] = freq_map[num]
+    #     i += len(freq)
+
+    # return nums
+
+
+    # THIRD ATTEMPT (partitioning): time complexity: O(n), 38 ms, beats 76.99%
+    low = 0
+    high = len(nums) - 1
+    current = 0
+
+    while current <= high:
+        if nums[current] == 0:
+            nums[low], nums[current] = nums[current], nums[low]
+            low += 1
+            current += 1
+        elif nums[current] == 2:
+            nums[high], nums[current] = nums[current], nums[high]
+            high -= 1
+            current -= 1
+        current += 1
 
     return nums
 
