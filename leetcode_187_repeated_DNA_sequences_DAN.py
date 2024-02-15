@@ -1,4 +1,6 @@
 def findRepeatedDnaSequences(s: str) -> list[str]:
+
+    # FIRST ATTEMPT: time complexity: O(n), 49 ms, beats 92.99%
     sequence_table = {}
     repeat_table = {}
 
