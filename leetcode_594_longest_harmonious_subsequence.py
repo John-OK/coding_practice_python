@@ -28,7 +28,7 @@ def findLHS(nums: list[int]) -> int:
     # return answer
 
 
-    # SECOND ATTEMPT: time complexity: O(), ms, beats %
+    # SECOND ATTEMPT: time complexity: O(n), 227 ms, beats 91.48%
     from collections import Counter
     freq_table = Counter(nums)
     longest_subsequence = 0
