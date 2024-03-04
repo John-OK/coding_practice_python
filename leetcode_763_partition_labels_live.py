@@ -1,5 +1,5 @@
- 
 def partitionLabels(s: str) -> list[int]:
+    # FIRST ATTEMPT: time complexity: O(n) 31 ms, beats 97.64%
     left, inner, right = 0, 0, 0
     char_index = {}
     parts = []
