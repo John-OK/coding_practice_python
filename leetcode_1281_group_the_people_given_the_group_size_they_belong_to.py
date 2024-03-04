@@ -1,6 +1,6 @@
 def groupThePeople(groupSizes: list[int]) -> list[list[int]]:
 
-    # FIRST ATTEMPT: time complexity: O(n), 65 ms, beats 73.11%
+    # FIRST ATTEMPT: time complexity: O(n), 55 ms, beats 97.97%
     size_indices = {}
     answer = []
 
