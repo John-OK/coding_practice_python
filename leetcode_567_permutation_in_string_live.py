@@ -8,7 +8,6 @@ def checkInclusion(s1: str, s2: str) -> bool:
         if char in letter_freq:
             substring = s2[i:i + length]
             substring_freq = Counter(substring)
-            same_freq = False
 
             if substring_freq == letter_freq:
                 return True
